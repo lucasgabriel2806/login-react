@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import "./Login.css";
 
-import { FaUser, FaLock } from "react-icons/fa";
+import { FaUser, FaLock, FaLockOpen } from "react-icons/fa";
 
 const Login = () => {
 
@@ -23,7 +23,7 @@ const Login = () => {
 
         <form onSubmit={handleSubmit}>
 
-            <h1>Acesse o sistema</h1>
+            <h1>LOG IN</h1>
 
             <div className="input-field">
 
@@ -40,14 +40,16 @@ const Login = () => {
                 required
                 onChange={(e) => setPassword(e.target.value)} />
                 <FaLock className="icon" />
+                <FaLockOpen style={{display: "none"}} className="icon" />
+                
 
             </div>
 
             <div className="recall-forget">
 
-                <label htmlFor="">
+                <label htmlFor="lembre-de-mim">
 
-                    <input type="checkbox" />
+                    <input type="checkbox" id="lembre-de-mim" />
                     Lembre de mim
 
                 </label>
@@ -61,8 +63,7 @@ const Login = () => {
             <div className="signup-link">
 
                 <p>
-                    Não tem uma conta? 
-                    <a href="#">Registrar</a> 
+                    Não tem uma conta? <a href="#">Registrar</a> 
                 </p>
 
             </div>
